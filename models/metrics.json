@@ -1,0 +1,100 @@
+{
+  "trained_at": "2026-09-23T13:20:35+00:00",
+  "sklearn_version": "1.8.0",
+  "target": "exam_score",
+  "features": [
+    "previous_score",
+    "study_hours_per_day",
+    "attendance_rate",
+    "homework_completion_rate",
+    "sleep_hours",
+    "screen_time_hours",
+    "physical_activity_minutes",
+    "motivation",
+    "exam_anxiety",
+    "parent_education",
+    "study_environment"
+  ],
+  "n_train": 800,
+  "n_test": 200,
+  "best_model": "Ridge",
+  "cv_leaderboard": [
+    {
+      "model": "Ridge",
+      "cv_mae": 4.044,
+      "cv_mae_std": 0.394,
+      "cv_rmse": 5.032,
+      "cv_r2": 0.878
+    },
+    {
+      "model": "Random Forest",
+      "cv_mae": 4.341,
+      "cv_mae_std": 0.227,
+      "cv_rmse": 5.476,
+      "cv_r2": 0.856
+    },
+    {
+      "model": "Gradient Boosting",
+      "cv_mae": 4.532,
+      "cv_mae_std": 0.203,
+      "cv_rmse": 5.697,
+      "cv_r2": 0.844
+    },
+    {
+      "model": "Baseline (mean)",
+      "cv_mae": 12.229,
+      "cv_mae_std": 0.514,
+      "cv_rmse": 14.511,
+      "cv_r2": -0.003
+    }
+  ],
+  "test_regression": {
+    "mae": 4.537,
+    "rmse": 5.588,
+    "r2": 0.835
+  },
+  "test_regression_baseline": {
+    "mae": 11.357,
+    "rmse": 13.805,
+    "r2": -0.009
+  },
+  "test_level": {
+    "accuracy": 0.8,
+    "macro_f1": 0.711,
+    "labels": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "confusion_matrix": [
+      [
+        5,
+        9,
+        0
+      ],
+      [
+        1,
+        87,
+        17
+      ],
+      [
+        0,
+        13,
+        68
+      ]
+    ]
+  },
+  "feature_defaults": {
+    "previous_score": 67.32,
+    "study_hours_per_day": 2.93,
+    "attendance_rate": 73.33,
+    "homework_completion_rate": 79.39,
+    "sleep_hours": 6.98,
+    "screen_time_hours": 3.47,
+    "physical_activity_minutes": 75.82,
+    "motivation": 6.91,
+    "exam_anxiety": 3.1,
+    "parent_education": "Master",
+    "study_environment": "Quiet"
+  }
+}

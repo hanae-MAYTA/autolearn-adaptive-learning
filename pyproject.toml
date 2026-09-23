@@ -1,0 +1,9 @@
+[project]
+name = "autolearn"
+version = "1.0.0"
+description = "Adaptive AI/ML learning platform with an exam-score prediction model"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
